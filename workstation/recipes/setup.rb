@@ -6,8 +6,8 @@ package 'git' do
   action :install
 end
 
-file '/etc/motd' do 
-  content 'This servers belongs to Harvey Bharaj!'
+template '/etc/motd' do 
+  source 'motd.erb'
   action :create
   owner 'root'
   group 'root'
